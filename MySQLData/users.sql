@@ -1,3 +1,5 @@
+CREATE DATABASE users;
+
 DROP TABLE IF EXISTS users.`users`;
 
 CREATE TABLE users.`users` (
