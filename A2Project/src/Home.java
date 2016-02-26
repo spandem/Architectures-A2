@@ -13,10 +13,7 @@ import javax.swing.JTabbedPane;
  *
  * Created on Feb 23, 2016, 11:17:06 AM
  */
-/**
- *
- * @author manyals
- */
+
 public class Home extends javax.swing.JFrame {
 
     /** Creates new form Home */
@@ -34,7 +31,7 @@ public class Home extends javax.swing.JFrame {
         JTabbedPane tPane = new JTabbedPane();
         
         tPane.add("Inventory", new InventoryMainFrame(userId).getContentPane());
-        frame.setSize(1200, 1200);
+        frame.setSize(1200 , 1200);
         
         tPane.add("Orders", new OrderFrame(userId).getContentPane());
         frame.setSize(1200, 1200);
