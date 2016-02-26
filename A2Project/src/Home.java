@@ -22,13 +22,17 @@ public class Home extends javax.swing.JFrame {
     /** Creates new form Home */
     int userId = 0;
 
+
     public Home(int uId) {
         initComponents();
+
+        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         userId = uId;
 
         JFrame frame = new JFrame("Home");
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         JTabbedPane tPane = new JTabbedPane();
-
+        
         tPane.add("Inventory", new InventoryMainFrame(userId).getContentPane());
         frame.setSize(1200, 1200);
         
@@ -130,6 +134,7 @@ public class Home extends javax.swing.JFrame {
      */
     public static void main(String args[]) {
        new Home(1).setVisible(false);
+
 
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables

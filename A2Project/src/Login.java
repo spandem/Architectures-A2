@@ -9,15 +9,15 @@ public class Login extends JFrame implements ActionListener
     JTextField tf1;
     JButton btn1;
     JPasswordField p1;
-
+    
     Login()
     {
-        setTitle("Login Form");        
+        setTitle("Login Page");
         setSize(600, 600);
         setLayout(null);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-        l1 = new JLabel("Login Form:");
+        l1 = new JLabel("Exton Exotic Plants");
         l1.setForeground(Color.blue);
         l1.setFont(new Font("Serif", Font.BOLD, 20));
 
@@ -91,9 +91,7 @@ public class Login extends JFrame implements ActionListener
                     st = DBConn.createStatement();
                     st.executeUpdate("insert into users.loginactivity (userid, timein) values ("+res.getInt(1)+",CURRENT_TIMESTAMP)");                   
                     this.setVisible(false);
-                    Home home = new Home(res.getInt(1));                    
-                   // home.setVisible(true);
-           
+                    new Home(res.getInt(1));
                 } else
                 {
                     JOptionPane.showMessageDialog(null,
